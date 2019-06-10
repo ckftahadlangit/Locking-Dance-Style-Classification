@@ -47,4 +47,4 @@ Run demo.py to predict one video input.
 (Note: Video must be in the test folder and must also be preprocessed similar to the train dataset.)
 
 ## Methodology Citation
-Harvey, M. (2017). Five video classification methods implemented in Keras and TensorFlow [Blog Post]. Retrieved from https://blog.coast.ai/five-video-classification -methods-implemented-in-keras-and-tensorflow-99cad29cc0b5
+Harvey, M. (2017). Five video classification methods implemented in Keras and TensorFlow [Blog Post]. Retrieved from https://blog.coast.ai/five-video-classification-methods-implemented-in-keras-and-tensorflow-99cad29cc0b5
