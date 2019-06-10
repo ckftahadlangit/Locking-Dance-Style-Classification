@@ -1,14 +1,5 @@
-# Five video classification methods
-
+# Locking Dance Style Classification
 The five video classification methods:
-
-1. Classify one frame at a time with a ConvNet
-1. Extract features from each frame with a ConvNet, passing the sequence to an RNN, in a separate network
-1. Use a time-dstirbuted ConvNet, passing the features to an RNN, much like #2 but all in one network (this is the `lrcn` network in the code).
-1. Extract features from each frame with a ConvNet and pass the sequence to an MLP
-1. Use a 3D convolutional network (has two versions of 3d conv to choose from)
-
-See the accompanying blog post for full details: https://medium.com/@harvitronix/five-video-classification-methods-implemented-in-keras-and-tensorflow-99cad29cc0b5
 
 ## Requirements
 
@@ -20,12 +11,8 @@ You must also have `ffmpeg` installed in order to extract the video files. If `f
 
 ## Getting the data
 
-First, download the dataset from UCF into the `data` folder:
-
-`cd data && wget http://crcv.ucf.edu/data/UCF101/UCF101.rar`
-
-Then extract it with `unrar e UCF101.rar`.
-
+First, download the dataset from *insert link here.*
+Then extract it.
 Next, create folders (still in the data folder) with `mkdir train && mkdir test && mkdir sequences && mkdir checkpoints`.
 
 Now you can run the scripts in the data folder to move the videos to the appropriate place, extract their frames and make the CSV file the rest of the code references. You need to run these in order. Example:
@@ -36,7 +23,7 @@ Now you can run the scripts in the data folder to move the videos to the appropr
 
 ## Extracting features
 
-Before you can run the `lstm` and `mlp`, you need to extract features from the images with the CNN. This is done by running `extract_features.py`. On my Dell with a GeFore 960m GPU, this takes about 8 hours. If you want to limit to just the first N classes, you can set that option in the file.
+Before you can run the `lstm`, you need to extract features from the images with the CNN. This is done by running `extract_features.py`. 
 
 ## Training models
 
@@ -48,20 +35,12 @@ The models are all defined in `models.py`. Reference that file to see which mode
 
 Training logs are saved to CSV and also to TensorBoard files. To see progress while training, run `tensorboard --logdir=data/logs` from the project root folder.
 
-## Demo/Using models
+## Validate
+Run validate_rnn.py for validation
 
-I have not yet implemented a demo where you can pass a video file to a model and get a prediction. Pull requests are welcome if you'd like to help out!
+## Prediction/Demo
+Run demo.py to predict one video input. 
+(Note: Video must be in the test folder and must also be preprocessed similar to the train dataset.)
 
-## TODO
-
-- [ ] Add data augmentation to fight overfitting
-- [x] Support multiple workers in the data generator for faster training
-- [ ] Add a demo script
-- [ ] Support other datasets
-- [ ] Implement optical flow
-- [ ] Implement more complex network architectures, like optical flow/CNN fusion
-
-## UCF101 Citation
-
-Khurram Soomro, Amir Roshan Zamir and Mubarak Shah, UCF101: A Dataset of 101 Human Action Classes From Videos in The Wild., CRCV-TR-12-01, November, 2012. 
-
+## Methodology Citation
+Harvey, M. (2017). Five video classification methods implemented in Keras and TensorFlow [Blog Post]. Retrieved from https://blog.coast.ai/five-video-classification -methods-implemented-in-keras-and-tensorflow-99cad29cc0b5
