@@ -1,4 +1,9 @@
 # Locking Dance Style Classification
+Using Locking Dances with 10 classes, this program classifies a given video input into what category/class it belongs. 
+
+This study is inspired by Harvey's (2017) blog: https://medium.com/@harvitronix/five-video-classification-methods-implemented-in-keras-and-tensorflow-99cad29cc0b5 and Meguillo's Popping Dance Style Classification: https://github.com/moonikwe/Popping-Dance-Style-Classification
+
+The methodology used in this study was adopted from Harvey's (2017) fourth method which made use of CNN and LSTM-RNN neural networks.
 
 ## Requirements
 
