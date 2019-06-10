@@ -1,0 +1,10 @@
+1 1-Lock
+2 2-Point
+3 3-WristRoll
+4 4-ScooBot
+5 5-ScoobyDoo
+6 6-SkeeterRabbit
+7 7-StopAndGo
+8 8-WhichAWay
+9 9-Pacing
+10 10-Up
