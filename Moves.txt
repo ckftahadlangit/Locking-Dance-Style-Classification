@@ -1,0 +1,10 @@
+1 Lock
+2 Point
+3 Twirl
+4 ScootBot
+5 ScoobyDoo
+6 SkeeterRabbit
+7 Stop&Go
+8 Whichaway
+9 Pacing
+10 Up
