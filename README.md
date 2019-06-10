@@ -1,5 +1,4 @@
 # Locking Dance Style Classification
-The five video classification methods:
 
 ## Requirements
 
